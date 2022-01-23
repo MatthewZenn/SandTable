@@ -1,0 +1,26 @@
+body, html {
+    background-color: rgb(30, 30, 30);
+}
+
+header {
+    height: 80px;
+    background-color: rgb(45, 45, 45);
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.logo {
+    width: 10%;
+    position: relative;
+    justify-content: center;
+    margin: auto;
+}
+
+#canvas {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
