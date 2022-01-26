@@ -1,11 +1,26 @@
 const canvas = document.getElementById('canvas');
-const context = canvas.getContext('2d');
-const centerX = canvas.width / 2;
-const centerY = canvas.height / 2;
-const radius = 200;
+const ctx = canvas.getContext('2d');
+const color1 = document.getElementById("color1");
+const color2 = document.getElementById("color2");
 
-context.beginPath();
-context.arc(centerX, centerY, radius, 0, 2*Math.PI, false);
-context.lineWidth = 4;
-context.strokeStyle = '#DF77FF';
-context.stroke();
+color2.oninput = function () {
+    var lineColor = color2.value;
+    ctx.strokeStyle = lineColor;
+}
+
+window.addEventListener("contextmenu", function(event){
+    event.preventDefault();
+    var contextElement = document.getElementById("context-menu");
+    contextElement.style.top = event.offsetY + "px";
+    contextElement.style.left = event.offsetX + "px";
+    contextElement.classList.add("active");
+});
+
+window.addEventListener("click", function (){
+    document.getElementById("context-menu").classList.remove("active");
+});
+
+function printresult() {
+    Canvas2Image.saveAsImage(canvas, 800, 800);
+}
+

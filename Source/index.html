@@ -11,8 +11,37 @@
     <body>
         <header>
             <image class="logo" src="Assets/Logo.svg"></image>
+            <button class="save" onclick="printresult()">Save</button>
         </header>
-        <canvas id="canvas" width="500px" height="500px"></canvas>
+        <div class="context-menu" id="context-menu">
+            <div class="item">Line</div>
+            <div class="item">Polygon</div>
+            <div class="item">Function</div>
+            <br>
+            <div class="item">Sine</div>
+            <div class="item">Wave</div>
+            <div class="item">Fibbinacci</div>
+            <div class="item">Noise</div>
+            <br>
+            <div class="item">Output</div>
+            <div class="item">Color</div>
+            <div class="item">Vector</div>
+            <div class="item">Math</div>
+            </div>
+        </div>
+        <canvas id="canvas" width="800px" height="800px"></canvas>
+        <div class="slidecontainer">
+            <h3>&#8767; Sine</h3>
+            <input type="number" min="0" max="1" value="0.5" class="slider" step=".01" id="myRange">
+            <input type="number" min="0" max="100" value="50" class="slider" step="1" id="myRange2">
+        </div>
+        <div class="slidecontainer">
+            <h3>&#9680; Color</h3>
+            <input type="color" class="box" id="color1">
+            <input type="color" class="box" id="color2" value= "#DF77FF">
+        </div>
         <script src="index.js" async defer></script>
+        <script src="canvas2image.js"></script>
+        <script src="Sine.js" async defer></script>
     </body>
 </html>

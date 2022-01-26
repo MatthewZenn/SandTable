@@ -1,21 +1,82 @@
 body, html {
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(20, 20, 20);
 }
 
 header {
-    height: 80px;
-    background-color: rgb(45, 45, 45);
+    height: 50px;
+    background-color: rgb(35, 35, 35);
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
+    display: inline-flex;
+}
+
+.save {
+    position: relative;
+    margin: auto 0;
+    width: 100px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 14pt;
+    border-radius: 5px;
+}
+
+.save:hover {
+    background-color: #DF77FF;
+    cursor: pointer;
 }
 
 .logo {
-    width: 10%;
+    width: 12%;
     position: relative;
     justify-content: center;
-    margin: auto;
+}
+
+.context-menu {
+    position: fixed;
+    z-index: 10000;
+    width: 150px;
+    background: rgb(35, 35, 35);
+    transform: scale(0);
+    transform-origin: top left;
+}
+
+.context-menu.active {
+    transform: scale(1);
+}
+
+.context-menu .item {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.context-menu .item:hover {
+    background-color: #DF77FF;
+}
+
+.option {
+    padding: 8px 10px;
+    font-size: 15px;
+    color: white;
+    display: none;
+}
+
+.context-menu .item:hover > .option {
+    position: relative;
+    display: block;
+    width: 150px;
+    background: rgb(10, 10, 10);
+    margin-left: 105%;
+}
+
+.context-menu .item .option:hover {
+    background-color: rgb(35, 80, 82);
 }
 
 #canvas {
@@ -23,4 +84,55 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+}
+
+.slidecontainer {
+    position: relative;
+    top: 400px;
+    left: 100px;
+    background-color:rgb(35, 35, 35);
+    width: fit-content;
+    height: fit-content;
+}
+
+.slider {
+    appearance: none;
+    width: 100px;
+    height: 20px;
+    background: rgb(35, 35, 35);
+    position: relative;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #DF77FF;
+    color: white;
+}
+
+.box {
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    background: rgb(35, 35, 35);
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border: 1px solid #DF77FF;
+    color: white;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+h3 {
+    color: white;
+    margin: auto;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #DF77FF;
+    padding: 5px;
 }
