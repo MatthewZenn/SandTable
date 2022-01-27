@@ -1,6 +1,6 @@
 <template>
   <header>
-      <img class="logo" src="public/Logo.svg">
+      <img class="logo" src="/Logo.svg">
       <button class="save" @click="printresult()">Save</button>
   </header>
 </template>

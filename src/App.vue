@@ -1,13 +1,16 @@
 <script setup>
+import VModal from 'vue-js-modal'
 import Header from './components/Header.vue'
 import Context from './components/Context.vue'
 import Canvas1 from './components/Canvas1.vue'
+import MyComponent from './components/Sine.vue'
 </script>
 
 <template>
   <Header/>
   <Canvas1/>
   <Context/>
+  <MyComponent/>
 </template>
 
 <style>
